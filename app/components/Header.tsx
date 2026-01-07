@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/60 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center px-6 py-4">
+      <div className="flex w-full items-center px-6 py-2">
         
         {/* Logo (Left) */}
         <Link href="/" className="flex items-center gap-2">
@@ -19,7 +19,7 @@ export default function Header() {
         </Link>
 
         {/* Right side: Nav + CTA */}
-        <div className="ml-auto flex items-center gap-8">
+        <div className="ml-auto flex items-center gap-10">
           
           {/* Navigation */}
           <nav className="hidden md:flex gap-8 text-sm text-gray-300">

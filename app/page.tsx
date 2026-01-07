@@ -1,42 +1,41 @@
 import Image from "next/image";
 import ShinyText from "@/components/ShinyText";
+import LightPillar from "@/components/Lightpillar";
+
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <section className="flex flex-col items-center text-center">
-        
-        {/* Welcome Text */}
-        <h1
-          className="mb-0 text-1xl tracking-wide md:text-6xl"
-          style={{ fontFamily: "var(--font-inter-black)" }}
-        >
-          Welcome To
-        </h1>
-        import ShinyText from './ShinyText';
+    <main className="relative min-h-screen overflow-hidden">
+
+      {/* 🔵 LightPillar Background */}
+      <div className="fixed inset-0 -z-10">
+        <LightPillar
+          topColor="#000000"
+          bottomColor="#fc03ba"
+        />
+      </div>
+
+      {/* 🔤 Foreground Content */}
+      <section className="flex min-h-screen flex-col items-center justify-center text-center">
 
         <ShinyText
-          text="✨ Shiny Text Effect"
+          text="Welcome To"
           speed={2}
-          delay={0}
           color="#b5b5b5"
           shineColor="#ffffff"
           spread={120}
           direction="left"
-          yoyo={false}
-          pauseOnHover={false}
+          className="mb-0 text-4xl md:text-6xl tracking-wide"
         />
 
-        {/* Logo */}
         <Image
           src="/logo.png"
           alt="RevouX Logo"
           width={800}
           height={400}
-          className="h-40 w-auto md:h-64 lg:h-80"
+          className="-mt-10 h-40 w-auto md:h-64 lg:h-80"
           priority
         />
-
 
       </section>
     </main>
