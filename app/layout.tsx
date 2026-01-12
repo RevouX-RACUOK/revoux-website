@@ -1,25 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
-import { Inter } from "next/font/google";
-
-
-const interBlack = Inter({
-  subsets: ["latin"],
-  weight: "900",
-  variable: "--font-inter-black",
-});
-
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  variable: "--font-geist-sans",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -35,9 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${interBlack.variable} bg-black text-white antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} bg-black text-white antialiased`}
       >
-
         {/* Header */}
         <Header />
 
