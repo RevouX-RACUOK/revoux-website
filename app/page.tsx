@@ -2,6 +2,8 @@ import HeroSection from "./components/HeroSection";
 import WhatWeDoSection from "./components/WhatWeDoSection";
 import Lightpillar from "@/components/Lightpillar";
 import WorksCarousel from "./components/WorksCarousel";
+import CallToAction from "./components/CallToAction";
+import Footer from "./components/Footer";
 
 export default function Page() {
   return (
@@ -19,6 +21,9 @@ export default function Page() {
       <HeroSection />
       <WhatWeDoSection />
       <WorksCarousel />
+      <CallToAction />
+      <Footer />
+
 
     </main>
   );

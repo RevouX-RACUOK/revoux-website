@@ -1,12 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/60 backdrop-blur-md">
       <div className="flex w-full items-center px-6 py-2">
         
-        {/* Logo (Left) */}
+        {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/logo.png"
@@ -18,33 +23,35 @@ export default function Header() {
           />
         </Link>
 
-        {/* Right side: Nav + CTA */}
+        {/* Nav */}
         <div className="ml-auto flex items-center gap-10">
-          
-          {/* Navigation */}
-          <nav className="font-manrope hidden md:flex gap-8 text-sm text-gray-300">
-            <Link href="#home" className="hover:text-white transition">
-              Home
-            </Link>
-            <Link href="#events" className="hover:text-white transition">
-              Events
-            </Link>
-            <Link href="#team" className="hover:text-white transition">
-              Team
-            </Link>
-            <Link href="#gallery" className="hover:text-white transition">
-              Gallery
-            </Link>
+          <nav className="hidden md:flex gap-8 font-manrope text-sm">
+            {[
+              { name: "Home", href: "/" },
+              { name: "About Us", href: "/about" },
+              { name: "Events", href: "/events" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`transition ${
+                  pathname === item.href
+                    ? "text-[#F70670]"
+                    : "text-gray-300 hover:text-white"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
 
           {/* CTA */}
           <Link
-            href="#contact"
-            className="font-manrope hidden md:inline-flex rounded-full bg-[#F70670] px-5 py-2 text-sm font-medium text-white hover:bg-pink-700 transition"
+            href="/contact"
+            className="hidden md:inline-flex rounded-full bg-[#F70670] px-5 py-2 font-manrope text-sm font-medium text-white transition hover:bg-pink-700"
           >
             Contact Us
           </Link>
-
         </div>
       </div>
     </header>

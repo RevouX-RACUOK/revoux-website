@@ -41,7 +41,7 @@ const works = [
 ];
 
 export default function WorksCarousel() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(2);
 
   return (
     <section className="relative w-full overflow-hidden py-20">
@@ -114,7 +114,7 @@ export default function WorksCarousel() {
                     <video
                       src={item.src}
                       muted
-                      loop
+                      preload="metadata"
                       className="h-full w-full object-cover grayscale"
                     />
                   ) : (
@@ -138,7 +138,7 @@ export default function WorksCarousel() {
           <span
             key={i}
             className={`h-2 w-2 rounded-full transition ${
-              i === active ? "bg-pink-500 w-4" : "bg-gray-600"
+              i === active ? "bg-[#F70670] w-4" : "bg-gray-600"
             }`}
           />
         ))}
