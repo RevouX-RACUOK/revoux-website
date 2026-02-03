@@ -50,7 +50,7 @@ export default function AboutPage() {
           </div>
 
           {/* Visual */}
-          <div className="h-[320px] md:h-[420px] rounded-3xl bg-pink-200" />
+          <div className="h-80 md:h-[420px] rounded-3xl bg-pink-200" />
         </div>
       </section>
 
