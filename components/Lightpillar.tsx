@@ -18,8 +18,8 @@ interface LightPillarProps {
 }
 
 const LightPillar: React.FC<LightPillarProps> = ({
-  topColor = '#5227FF',
-  bottomColor = '#FF9FFC',
+  topColor = '#F70670',
+  bottomColor = '#F7067',
   intensity = 1.0,
   rotationSpeed = 0.5,
   interactive = false,

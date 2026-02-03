@@ -9,19 +9,21 @@ export default function WhatWeDoSection() {
       className="min-h-screen px-6 py-32"
     >
       {/* Section heading */}
-      <h2 className="text-center text-4xl md:text-6xl font-extrabold tracking-tight">
-        <span className="text-white">what we </span>
-        <span className="text-[#f70670]">do</span>
+      <h2 className="text-center font-onest font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+        
+        <span className="text-[#f1f9f4]">What we </span>
+        <span className="text-[#f70670]">Do</span>
       </h2>
 
-
-      <p className="mt-4 max-w-2xl mx-auto text-center text-gray-400">
+      <p className="mx-auto text-center font-manrope text-[#f1f9f4] text-base md:text-lg leading-relaxed max-w-xl">
         We craft creative solutions that bring stories to life across
         visual, audio, and digital mediums.
       </p>
 
+
+
             {/* Cards */}
-        <div className="mx-auto mt-20 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="font-manrope mx-auto mt-20 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <ServiceCard
             icon={<Camera size={26} />}
             title="Photography"

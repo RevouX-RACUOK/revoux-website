@@ -22,7 +22,7 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-10">
           
           {/* Navigation */}
-          <nav className="hidden md:flex gap-8 text-sm text-gray-300">
+          <nav className="font-manrope hidden md:flex gap-8 text-sm text-gray-300">
             <Link href="#home" className="hover:text-white transition">
               Home
             </Link>
@@ -40,7 +40,7 @@ export default function Header() {
           {/* CTA */}
           <Link
             href="#contact"
-            className="hidden md:inline-flex rounded-full bg-pink-600 px-5 py-2 text-sm font-medium text-white hover:bg-pink-700 transition"
+            className="font-manrope hidden md:inline-flex rounded-full bg-[#F70670] px-5 py-2 text-sm font-medium text-white hover:bg-pink-700 transition"
           >
             Contact Us
           </Link>

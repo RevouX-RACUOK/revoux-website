@@ -12,13 +12,14 @@ export default function HeroSection() {
       {/* Welcome text */}
       <ShinyText
         text="Welcome To"
-        speed={2}
-        color="#b5b5b5"
-        shineColor="#ffffff"
+        speed={10}
+        color="#F1F9F4"
+        shineColor="#F70670"
         spread={120}
         direction="left"
-        className="mb-0 text-4xl md:text-6xl tracking-wide"
+        className="font-onest font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
       />
+
 
       {/* Logo */}
       <Image
@@ -36,7 +37,7 @@ export default function HeroSection() {
         {/* Primary Button */}
         <Link
             href="#what-we-do"
-            className="group inline-flex items-center gap-3 rounded-xl bg-[#0f172a] px-8 py-4 text-sm md:text-base font-medium text-white transition hover:bg-[#020617]"
+            className="group inline-flex items-center gap-3 rounded-4xl bg-[#000000] px-8 py-4 text-sm md:text-base font-medium text-[#f70670] transition hover:text-[#F1F9F4]"
         >
             Explore Our Work
             <span className="transition-transform group-hover:translate-x-1">
@@ -47,8 +48,9 @@ export default function HeroSection() {
         {/* Secondary Button */}
         <Link
             href="#contact"
-            className="inline-flex items-center rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm md:text-base font-medium text-gray-900 transition hover:bg-gray-100"
+            className="group inline-flex items-center gap-3 rounded-4xl bg-[#F1F9F4] px-8 py-4 text-sm md:text-base font-medium text-[#000000] transition "
         >
+        
             Get in Touch
         </Link>
 

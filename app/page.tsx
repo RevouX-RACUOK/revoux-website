@@ -1,6 +1,7 @@
 import HeroSection from "./components/HeroSection";
 import WhatWeDoSection from "./components/WhatWeDoSection";
 import Lightpillar from "@/components/Lightpillar";
+import WorksCarousel from "./components/WorksCarousel";
 
 export default function Page() {
   return (
@@ -17,6 +18,7 @@ export default function Page() {
 
       <HeroSection />
       <WhatWeDoSection />
+      <WorksCarousel />
 
     </main>
   );

@@ -13,14 +13,14 @@ export default function ServiceCard({
   description,
 }: ServiceCardProps) {
   return (
-    <SpotlightCard className="bg-white border border-gray-200">
+    <SpotlightCard className="bg-[#000000] border-gray-400">
       {/* Icon */}
-      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gray-100 text-gray-900">
+      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-[#F70670] text-[#f1f9f4]">
         {icon}
       </div>
 
       {/* Title */}
-      <h3 className="mb-2 text-lg font-semibold text-gray-900">
+      <h3 className="mb-2 text-lg font-semibold text-[#f70670]">
         {title}
       </h3>
 
