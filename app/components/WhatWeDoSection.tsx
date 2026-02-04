@@ -14,8 +14,8 @@ export default function WhatWeDoSection() {
         <span className="text-[#f1f9f4]">What we </span>
         <span className="text-[#f70670]">Do</span>
       </h2>
-mx-auto text-center font-manrope text-[#f1f9f4] text-base md:text-lg leading-relaxed max-w-xl
-      <p className="">
+
+      <p className="mt-4 mx-auto text-center font-manrope text-[#f1f9f4] text-base md:text-lg leading-relaxed max-w-xl">
         We craft creative solutions that bring stories to life across
         visual, audio, and digital mediums.
       </p>

@@ -19,7 +19,7 @@ export default function CallToAction() {
 
         {/* Button */}
         <div className="mt-10 flex justify-center">
-          <button className="group inline-flex items-center gap-3 rounded-xl bg-[#F70670] px-8 py-4 font-manrope font-semibold text-white transition hover:bg-[#e00566]">
+          <button className="group inline-flex items-center gap-3 rounded-full bg-[#F70670] px-8 py-4 font-manrope font-semibold text-white transition hover:bg-[#e00566]">
             Start Your Project
             <span className="transition-transform group-hover:translate-x-1">
               →
