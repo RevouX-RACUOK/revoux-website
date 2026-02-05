@@ -1,6 +1,7 @@
 import OurValuesSection from "@/components/OurValuesSection";
 import TeamSection from "@/components/TeamSection";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 
 export default function AboutPage() {
@@ -53,6 +54,25 @@ export default function AboutPage() {
           <div className="h-[320px] md:h-[420px] rounded-3xl bg-pink-200" />
         </div>
       </section>
+
+        {/*rotaract logo*/}
+      <div className="mb-10 flex flex-col items-center text-center">
+        <p className=" font-manrope text-sm tracking-wide text-gray-500">
+          Powered by
+        </p>
+
+        <Image
+          src="/RACUOK.png"
+          alt="RevouX Logo"
+          width={400}
+          height={50}
+          className="h-40 w-auto md:h-64 lg:h-40"
+          priority
+        />
+      </div>
+
+
+      
 
       {/* Our Values */}
       <OurValuesSection />

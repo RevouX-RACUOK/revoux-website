@@ -72,15 +72,15 @@ export default function ContactPage() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4">
                   <span className="text-[#F70670]">✉</span>
-                  hello@revoux.media
+                  mediaunit.racuok@gmail.com
                 </div>
                 <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4">
                   <span className="text-[#F70670]">☎</span>
-                  +1 (555) 123-4567
+                  +94 71 8788 420 | +94 70 3647 088 | +94 76 8224 295
                 </div>
                 <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4">
                   <span className="text-[#F70670]">📍</span>
-                  123 Creative Street, Media City, MC 12345
+                  Rotaract Club of University of Kelaniya, University of Kelaniya
                 </div>
               </div>
             </div>

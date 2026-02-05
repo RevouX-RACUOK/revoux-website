@@ -1,6 +1,6 @@
 
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
-import ProjectsGallerySection from "@/components/ProjectsGallerySection";
+import MasonryGallery from "@/components/MasonryGallery";
 import Footer from "../components/Footer";
 
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
       </section>
 
       <UpcomingEventsSection />
-      <ProjectsGallerySection />
+      <MasonryGallery />
 
       <Footer />
 
