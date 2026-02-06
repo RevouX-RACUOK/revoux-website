@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Onest, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -22,21 +23,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${onest.variable} ${manrope.variable} bg-[#000000] text-[#F1F9F4] antialiased`}
       >
-        {/* Header */}
         <Header />
-
-        {/* Page content */}
-        <main className="pt-20">
-          {children}
-        </main>
+        <ScrollToTop />
+        <main className="pt-20">{children}</main>
       </body>
     </html>
   );

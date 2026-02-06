@@ -14,7 +14,7 @@ export default function AboutPage() {
           <span className="text-[#F70670]">RêvouX</span>
         </h1>
 
-        <p className="mx-auto mt-4 text-center font-manrope text-[#4f5250] text-base md:text-lg leading-relaxed max-w-xl">
+        <p className="mx-auto mt-4 text-center font-manrope text-[#8e8e8e] text-base md:text-lg leading-relaxed max-w-xl">
           We are a collective of passionate creatives, technologists, and storytellers
           united by our love for compelling media.
         </p>
@@ -51,7 +51,16 @@ export default function AboutPage() {
           </div>
 
           {/* Visual */}
-          <div className="h-[320px] md:h-[420px] rounded-3xl bg-pink-200" />
+          <div className="relative h-[320px] md:h-[420px] overflow-hidden rounded-3xl">
+            <Image
+              src="/about/grp.png"
+              alt="Our story"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          
         </div>
       </section>
 

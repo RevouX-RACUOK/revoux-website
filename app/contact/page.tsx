@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
@@ -76,7 +77,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4">
                   <span className="text-[#F70670]">☎</span>
-                  +94 71 8788 420 | +94 70 3647 088 | +94 76 8224 295
+                  071 8788 420 | 070 3647 088 | 076 8224 295
                 </div>
                 <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4">
                   <span className="text-[#F70670]">📍</span>
@@ -85,31 +86,38 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="flex h-48 items-center justify-center rounded-2xl bg-pink-100 text-center text-sm text-gray-600">
-              📍 Interactive map coming soon
-            </div>
+            
 
             {/* Office Hours */}
-            <div className="rounded-2xl border border-gray-200 p-6">
+            <div className="  p-6">
               <h3 className="mb-4 font-onest font-semibold">
-                Office Hours
+                Follow Us
               </h3>
 
-              <div className="space-y-2 text-sm text-gray-600">
-                <div className="flex justify-between">
-                  <span>Monday – Friday</span>
-                  <span>9:00 AM – 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span>10:00 AM – 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Closed</span>
-                </div>
+              <div className=" mt-6 flex gap-10">
+                  <a
+                      href="https://www.instagram.com/revoux.racuok?igsh=MXY0N2JsYzZtbHZueg=="
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-pink-700 transition hover:bg-gray-100 hover:text-[#F70670]"
+                  >
+                      <FaInstagram size={20} />
+                  </a>
+  
+                  <a
+                      href="https://www.facebook.com/share/1U8Stp3J5C/"
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-pink-700 transition hover:bg-gray-100 hover:text-[#F70670]"
+                  >
+                      <FaFacebookF size={20} />
+                  </a>
+  
+                  <a
+                      href="https://vm.tiktok.com/ZSHEEsLHgBXve-00IHG/"
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-black-800 text-pink-700 transition hover:bg-gray-100 hover:text-[#F70670]"
+                  >
+                      <FaTiktok size={20} />
+                  </a>
               </div>
+
+              
             </div>
           </div>
         </div>

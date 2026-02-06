@@ -12,7 +12,7 @@ export default function CallToAction() {
         </h2>
 
         {/* Subtext */}
-        <p className="mt-5 mx-auto text-center font-manrope text-[#494b49] text-base md:text-lg leading-relaxed max-w-xl">
+        <p className="mt-5 mx-auto text-center font-manrope  text-[#8e8e8e] text-base md:text-lg leading-relaxed max-w-xl">
           Let’s collaborate and bring your vision to life. Our team is ready to
           make magic happen.
         </p>

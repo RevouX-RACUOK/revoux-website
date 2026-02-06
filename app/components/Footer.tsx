@@ -96,9 +96,9 @@ export default function Footer() {
 
             <ul className="mt-4 space-y-3 font-manrope">
               <li>mediaunit.racuok@gmail.com</li>
-              <li>+94 71 8788 420 |  +94 70 3647 088 | +94 76 8224 295</li>
+              <li>071 8788 420 |  070 3647 088 | 076 8224 295</li>
               <li>
-                Rotaract Club of University of Kelaniya
+                Rotaract Club of University of Kelaniya,
                 <br />
                 University of Kelaniya
               </li>

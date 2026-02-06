@@ -6,7 +6,7 @@ export default function WhatWeDoSection() {
   return (
     <section
       id="what-we-do"
-      className="min-h-screen px-6 py-32"
+      className="min-h-screen  px-6 py-32"
     >
       {/* Section heading */}
       <h2 className="text-center font-onest font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
@@ -38,7 +38,7 @@ export default function WhatWeDoSection() {
 
           <ServiceCard
             icon={<Mic size={26} />}
-            title="Audio Production"
+            title="Moderating"
             description="Crafting immersive soundscapes and crystal-clear audio content."
           />
 
