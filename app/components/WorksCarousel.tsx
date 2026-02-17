@@ -5,31 +5,31 @@ import { useState } from "react";
 const works = [
   {
     type: "image",
-    src: "/works/image.jpg",
-    title: "Launch an Instagram account",
-    subtitle: "for a beauty studio from scratch.",
-    meta: "3,100 subscribers in the first 2 weeks, recording for 2 weeks ahead.",
+    src: "/works/nethsuwa.jpg",
+    title: "Project Nethsuwa",
+    subtitle: "Phase 01",
+    meta: "organized by the Leo Club of University of Kelaniya.",
   },
   {
     type: "video",
-    src: "/works/video.mp4",
-    title: "Launch an Instagram account",
-    subtitle: "for a beauty studio from scratch.",
-    meta: "3,100 subscribers in the first 2 weeks, recording for 2 weeks ahead.",
+    src: "/works/christinzel.mp4",
+    title: "Christinzel 25",
+    subtitle: "A Night Wrapped in Lights and Laughter",
+    meta: "Organized by the Club Service Avenue of Rotaract club of University of Kelaniya.",
   },
   {
     type: "image",
-    src: "/works/image.jpg",
-    title: "Launch an Instagram account",
-    subtitle: "for a beauty studio from scratch.",
-    meta: "3,100 subscribers in the first 2 weeks, recording for 2 weeks ahead.",
+    src: "/works/inktalk.png",
+    title: "Inktalk",
+    subtitle: "Podcast Series",
+    meta: "Organized by the Editorial Avenue of Rotaract club of University of Kelaniya.",
   },
   {
-    type: "image",
-    src: "/works/image.jpg",
-    title: "Launch an Instagram account",
-    subtitle: "for a beauty studio from scratch.",
-    meta: "3,100 subscribers in the first 2 weeks, recording for 2 weeks ahead.",
+    type: "video",
+    src: "/works/mmu.mp4",
+    title: "Mr & Miss University '25",
+    subtitle: "Inter University Pagent",
+    meta: "Organized by the Professional Development Avenue of Rotaract club of University of Kelaniya.",
   },
   {
     type: "image",
@@ -45,10 +45,13 @@ export default function WorksCarousel() {
 
   return (
     <section className="relative w-full overflow-hidden py-20">
-      <h2 className="mb-7 text-center font-onest font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+      <h2 className="mb-7 text-center font-onest font-bold leading-[1.05] tracking-tight 
+      text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+      text-shadow-[2px_2px_6px_rgba(0,0,0,0.8)]">
         <span className="text-white">Projects</span>{" "}
         <span className="text-[#F70670]">we’ve Covered</span>
       </h2>
+
 
       <p className="mb-16 mx-auto text-center font-manrope text-[#f1f9f4] text-base md:text-lg leading-relaxed max-w-xl">
         A showcase of our finest work across various media productions and creative ventures.

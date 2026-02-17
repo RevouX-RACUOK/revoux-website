@@ -9,11 +9,13 @@ export default function WhatWeDoSection() {
       className="min-h-screen  px-6 py-32"
     >
       {/* Section heading */}
-      <h2 className="text-center font-onest font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+      <h2 className="text-center font-onest font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-shadow-[2px_2px_6px_rgba(0,0,0,0.8)]">
         
         <span className="text-[#f1f9f4]">What we </span>
         <span className="text-[#f70670]">Do</span>
       </h2>
+
+     
 
       <p className="mt-4 mx-auto text-center font-manrope text-[#f1f9f4] text-base md:text-lg leading-relaxed max-w-xl">
         We craft creative solutions that bring stories to life across

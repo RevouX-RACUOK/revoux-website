@@ -3,18 +3,18 @@
 import Image from "next/image";
 
 const gallery = [
-  { src: "/gallery/workshop.png", span: "row-span-2" },
-  { src: "/gallery/workshop.png", span: "row-span-1" },
-  { src: "/gallery/workshop.png", span: "row-span-1" },
-  { src: "/gallery/workshop.png", span: "row-span-2" },
-  { src: "/gallery/workshop.png", span: "row-span-1" },
-  { src: "/gallery/workshop.png", span: "row-span-1" },
-  { src: "/gallery/workshop.png", span: "row-span-2" },
-  { src: "/gallery/workshop.png", span: "row-span-1" },
-  { src: "/gallery/workshop.png", span: "row-span-1" },
-  { src: "/gallery/workshop.png", span: "row-span-2" },
-  { src: "/gallery/workshop.png", span: "row-span-1" },
-  { src: "/gallery/workshop.png", span: "row-span-1" },
+  { src: "/gallery/1.jpg", span: "row-span-2" },
+  { src: "/gallery/2.jpg", span: "row-span-1" },
+  { src: "/gallery/3.jpeg", span: "row-span-1" },
+  { src: "/gallery/4.jpg", span: "row-span-2" },
+  { src: "/gallery/5.jpg", span: "row-span-1" },
+  { src: "/gallery/6.jpg", span: "row-span-1" },
+  { src: "/gallery/7.jpg", span: "row-span-2" },
+  { src: "/gallery/8.jpg", span: "row-span-1" },
+  { src: "/gallery/9.jpg", span: "row-span-1" },
+  { src: "/gallery/10.jpg", span: "row-span-2" },
+  { src: "/gallery/11.jpg", span: "row-span-1" },
+  { src: "/gallery/12.jpg", span: "row-span-1" },
 ];
 
 export default function EditorialGallery() {

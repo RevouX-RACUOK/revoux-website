@@ -13,9 +13,9 @@ const events = [
     cta: "Register Now",
   },
   {
-    title: "Film Screening Night",
+    title: "Film Screening",
     description:
-      "Premiere screenings of our latest short films and documentaries, followed by Q&A.",
+      "Short film",
     date: "March 22, 2024",
     time: "7:00 PM - 10:00 PM",
     location: "Revoux Studio Theater",
