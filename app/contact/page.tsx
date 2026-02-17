@@ -5,22 +5,22 @@ import Footer from "../components/Footer";
 import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 
 export default function ContactPage() {
-  const [status, setStatus] = useState(null); // success | error
-  const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"success" | "error" | null>(null);
+  const [message, setMessage] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setStatus(null);
 
-    const formData = new FormData(e.target);
+    const formData = new FormData(e.currentTarget);
 
     const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      subject: formData.get("subject") as string,
+      message: formData.get("message") as string,
     };
 
     try {
@@ -33,12 +33,12 @@ export default function ContactPage() {
       if (res.ok) {
         setStatus("success");
         setMessage("Message sent successfully!");
-        e.target.reset();
+        e.currentTarget.reset();
       } else {
         setStatus("error");
         setMessage("Failed to send message. Please try again.");
       }
-    } catch (err) {
+    } catch (error) {
       setStatus("error");
       setMessage("Something went wrong.");
     }
@@ -70,7 +70,6 @@ export default function ContactPage() {
               Send us a message
             </h2>
 
-            {/* ✅ ALERT MESSAGE */}
             {status && (
               <div
                 className={`mb-5 rounded-lg border px-4 py-3 text-sm font-medium ${
@@ -127,15 +126,14 @@ export default function ContactPage() {
             </form>
           </div>
 
-          {/* Right: Info (UNCHANGED) */}
+          {/* Right: Info */}
           <div className="space-y-8">
-            {/* Contact Info */}
             <div>
-              <h2 className="mb-4 font-onest text-lg font-semibold">
+              <h2 className="mb-4 font-onest text-lg font-semibold text-white">
                 Contact Information
               </h2>
 
-              <div className="space-y-3">
+              <div className="space-y-3 text-white">
                 <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4">
                   <span className="text-[#F70670]">✉</span>
                   mediaunit.racuok@gmail.com
@@ -151,30 +149,35 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Follow Us */}
             <div className="p-6">
-              <h3 className="mb-4 font-onest font-semibold">
+              <h3 className="mb-4 font-onest font-semibold text-white">
                 Follow Us
               </h3>
 
               <div className="mt-6 flex gap-10">
                 <a
-                  href="https://www.instagram.com/revoux.racuok?igsh=MXY0N2JsYzZtbHZueg=="
+                  href="https://www.instagram.com/revoux.racuok"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-pink-700 transition hover:bg-gray-100 hover:text-[#F70670]"
                 >
                   <FaInstagram size={20} />
                 </a>
 
                 <a
-                  href="https://www.facebook.com/share/1U8Stp3J5C/"
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-pink-700 transition hover:bg-gray-100 hover:text-[#F70670]"
                 >
                   <FaFacebookF size={20} />
                 </a>
 
                 <a
-                  href="https://vm.tiktok.com/ZSHEEsLHgBXve-00IHG/"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-black-800 text-pink-700 transition hover:bg-gray-100 hover:text-[#F70670]"
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-pink-700 transition hover:bg-gray-100 hover:text-[#F70670]"
                 >
                   <FaTiktok size={20} />
                 </a>
