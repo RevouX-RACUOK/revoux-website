@@ -22,14 +22,14 @@ const teamMembers = [
     image: "/about/indusara.jpg",
   },
   {
-    name: "Rtr.Thilini Senevirathna",
+    name: "Rtr. Thilini Senevirathna",
     role: "Team Leader",
     image: "/about/chris.jpg",
   },
   {
     name: "Rtr. Pamodya",
     role: "Team Leader",
-    image: "/about/emily.jpg",
+    image: "/about/pamodya.jpeg",
   },
   {
     name: "Rtr. Osanda Senevirathna",

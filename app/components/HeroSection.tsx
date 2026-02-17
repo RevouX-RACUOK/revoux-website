@@ -7,7 +7,8 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="flex min-h-screen flex-col items-center justify-center text-center"
+      className="flex min-h-screen flex-col items-center justify-start md:justify-center pt-24 md:pt-0 text-center"
+
     >
       {/* Welcome text */}
       <ShinyText
@@ -32,7 +33,7 @@ export default function HeroSection() {
       />
 
       {/* Buttons */}
-        <div className="mt-10 flex flex-row items-center gap-6">
+        <div className="mt-10 flex flex-col sm:flex-row items-center gap-6">
 
         {/* Primary Button */}
         <Link
@@ -47,7 +48,7 @@ export default function HeroSection() {
 
         {/* Secondary Button */}
         <Link
-            href="#contact"
+            href="/contact"
             className="group inline-flex items-center gap-3 rounded-4xl bg-[#F1F9F4] px-8 py-4 text-sm md:text-base font-medium text-[#000000] transition "
         >
         

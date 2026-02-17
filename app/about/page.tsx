@@ -51,7 +51,7 @@ export default function AboutPage() {
           </div>
 
           {/* Visual */}
-          <div className="relative h-[320px] md:h-[420px] overflow-hidden rounded-3xl">
+          <div className="relative w-full aspect-video md:h-[420px] overflow-hidden rounded-3xl">
             <Image
               src="/about/grp.png"
               alt="Our story"
@@ -60,6 +60,7 @@ export default function AboutPage() {
               priority
             />
           </div>
+
           
         </div>
       </section>
