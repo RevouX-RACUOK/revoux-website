@@ -30,7 +30,9 @@ export default function ContactPage() {
         body: JSON.stringify(data),
       });
 
-      if (res.ok) {
+      const result = await res.json(); // 🔥 important
+
+      if (res.ok && result.success) {
         setStatus("success");
         setMessage("Message sent successfully!");
         e.currentTarget.reset();
@@ -39,6 +41,7 @@ export default function ContactPage() {
         setMessage("Failed to send message. Please try again.");
       }
     } catch (error) {
+      console.error("Frontend error:", error);
       setStatus("error");
       setMessage("Something went wrong.");
     }
