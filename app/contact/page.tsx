@@ -30,15 +30,21 @@ export default function ContactPage() {
         body: JSON.stringify(data),
       });
 
-      const result = await res.json(); // 🔥 important
+      let result: any = null;
 
-      if (res.ok && result.success) {
+      try {
+        result = await res.json(); // Safe JSON parsing
+      } catch {
+        result = null; // Prevent crash if response is empty
+      }
+
+      if (res.ok && result?.success) {
         setStatus("success");
         setMessage("Message sent successfully!");
         e.currentTarget.reset();
       } else {
         setStatus("error");
-        setMessage("Failed to send message. Please try again.");
+        setMessage(result?.message || "Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error("Frontend error:", error);
