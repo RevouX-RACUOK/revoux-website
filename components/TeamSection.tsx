@@ -14,32 +14,32 @@ const teamMembers = [
   {
     name: "Rtr. Nadeesha Nilupul",
     role: "Digital Media Co-Director",
-    image: "/about/nadeesha.jpg",
+    image: "/about/nadeesha.png",
   },
   {
     name: "Rtr. Indusara Senanayake",
     role: "Team Leader",
-    image: "/about/indusara.jpg",
+    image: "/about/indusara.png",
   },
   {
     name: "Rtr. Thilini Senevirathna",
     role: "Team Leader",
-    image: "/about/thilini.jpeg",
+    image: "/about/thilini.png",
   },
   {
     name: "Rtr. Pamodya",
     role: "Team Leader",
-    image: "/about/pamodya.jpeg",
+    image: "/about/pamodya.png",
   },
   {
     name: "Rtr. Osanda Senevirathna",
     role: "Photography / Videography Team",
-    image: "/about/osanda.jpeg",
+    image: "/about/osanda.png",
   },
   {
     name: "Rtr. Oshan Harischandra",
     role: "Photography Team",
-    image: "/about/oshan.jpeg",
+    image: "/about/oshan.png",
   },
   {
     name: "Rtr. Sachini Rajapaksha",
@@ -64,12 +64,12 @@ const teamMembers = [
   {
     name: "Rtr. Sithruwani Jayarathna",
     role: "Moderating Team",
-    image: "/about/sithruwani.jpg",
+    image: "/about/sithruwani.png",
   },
   {
     name: "Rtr. Kaveesha Vimukthi",
     role: "Video Editor",
-    image: "/about/kaveesha.jpeg",
+    image: "/about/kaveesha.png",
   },
 
 ];

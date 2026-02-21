@@ -11,7 +11,7 @@ const works = [
     title: "Project Nethsuwa",
     subtitle: "Phase 01",
     meta: "organized by the Leo Club of University of Kelaniya.",
-    link: "/projects/nethsuwa",
+    link: "https://www.facebook.com/share/p/1KerXAhvyN/",
   },
   {
     type: "video",
@@ -29,7 +29,7 @@ const works = [
     subtitle: "Podcast Series",
     meta:
       "Organized by the Editorial Avenue of Rotaract club of University of Kelaniya.",
-      link: "/projects/nethsuwa",
+      link: "https://youtu.be/Nq3d2wGx9Bw?si=2QQZf9VQSFrNwTwG",
   },
   {
     type: "video",
@@ -38,7 +38,7 @@ const works = [
     subtitle: "Inter University Pagent",
     meta:
       "Organized by the Professional Development Avenue of Rotaract club of University of Kelaniya.",
-      link: "/projects/nethsuwa",
+      link: "https://www.instagram.com/mrandmissuniversity_2025?igsh=MXRrNW45NG1wN3ltcg==",
   },
   {
     type: "image",
