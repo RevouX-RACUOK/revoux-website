@@ -10,7 +10,7 @@ const events = [
     date: "March 15, 2024",
     time: "10:00 AM - 6:00 PM",
     location: "University of Kelaniya",
-    image: "/events/creative-summit.jpg",
+    image: "/gallery/graphic.png",
     cta: "Register Now",
     link: "https://forms.gle/graphicdesign",
   },

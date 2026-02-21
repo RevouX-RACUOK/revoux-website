@@ -4,12 +4,12 @@ const teamMembers = [
   {
     name: "Rtr. Sithika Himandith",
     role: "Digital Media Co-Director",
-    image: "/about/sithika.jpg",
+    image: "/about/sithika.png",
   },
   {
     name: "Rtr. Gangani Yashodara",
     role: "Digital Media Co-Director",
-    image: "/about/yashodara.jpg",
+    image: "/about/yashodara.png",
   },
   {
     name: "Rtr. Nadeesha Nilupul",
@@ -24,7 +24,7 @@ const teamMembers = [
   {
     name: "Rtr. Thilini Senevirathna",
     role: "Team Leader",
-    image: "/about/chris.jpg",
+    image: "/about/thilini.jpeg",
   },
   {
     name: "Rtr. Pamodya",
@@ -34,27 +34,22 @@ const teamMembers = [
   {
     name: "Rtr. Osanda Senevirathna",
     role: "Photography / Videography Team",
-    image: "/about/daniel.jpg",
+    image: "/about/osanda.jpeg",
   },
   {
     name: "Rtr. Oshan Harischandra",
     role: "Photography Team",
-    image: "/about/gd.png",
-  },
-  {
-    name: "Daniel Lee",
-    role: "Video Editor",
-    image: "/about/daniel.jpg",
+    image: "/about/oshan.jpeg",
   },
   {
     name: "Rtr. Sachini Rajapaksha",
     role: "Moderating Team",
-    image: "/about/sachini.jpg",
+    image: "/about/sachini.png",
   },
   {
     name: "Rtr. Baghya John",
     role: "Moderating Team",
-    image: "/about/bagya.jpg",
+    image: "/about/bagya.png",
   },
   {
     name: "Rtr. Hiranya Edirisinghe",
@@ -64,7 +59,7 @@ const teamMembers = [
   {
     name: "Rtr. Methmi Abeysinghe",
     role: "Photography / Moderating Team",
-    image: "/about/rthr.jpg",
+    image: "/about/methmi.png",
   },
   {
     name: "Rtr. Sithruwani Jayarathna",
@@ -74,23 +69,9 @@ const teamMembers = [
   {
     name: "Rtr. Kaveesha Vimukthi",
     role: "Video Editor",
-    image: "/about/sophia.jpg",
+    image: "/about/kaveesha.jpeg",
   },
-  {
-    name: "Rtr. Sachini",
-    role: "Moderating Team",
-    image: "/about/sachini.jpg",
-  },
-  {
-    name: "Rtr. Baghya John",
-    role: "Moderating Team",
-    image: "/about/bagya.jpg",
-  },
-  {
-    name: "Rtr. Hiranya Edirisinghe",
-    role: "Moderating Team",
-    image: "/about/sophia.jpg",
-  },
+
 ];
 
 export default function TeamSection() {

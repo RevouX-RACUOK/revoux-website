@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useState, useRef, useEffect } from "react";
 
 const works = [
@@ -9,34 +11,43 @@ const works = [
     title: "Project Nethsuwa",
     subtitle: "Phase 01",
     meta: "organized by the Leo Club of University of Kelaniya.",
+    link: "/projects/nethsuwa",
   },
   {
     type: "video",
     src: "/works/christinzel.mp4",
     title: "Christinzel 25",
     subtitle: "A Night Wrapped in Lights and Laughter",
-    meta: "Organized by the Club Service Avenue of Rotaract club of University of Kelaniya.",
+    meta:
+      "Organized by the Club Service Avenue of Rotaract club of University of Kelaniya.",
+      link: "/projects/nethsuwa",
   },
   {
     type: "image",
     src: "/works/inktalk.png",
     title: "Inktalk",
     subtitle: "Podcast Series",
-    meta: "Organized by the Editorial Avenue of Rotaract club of University of Kelaniya.",
+    meta:
+      "Organized by the Editorial Avenue of Rotaract club of University of Kelaniya.",
+      link: "/projects/nethsuwa",
   },
   {
     type: "video",
     src: "/works/mmu.mp4",
     title: "Mr & Miss University '25",
     subtitle: "Inter University Pagent",
-    meta: "Organized by the Professional Development Avenue of Rotaract club of University of Kelaniya.",
+    meta:
+      "Organized by the Professional Development Avenue of Rotaract club of University of Kelaniya.",
+      link: "/projects/nethsuwa",
   },
   {
     type: "image",
     src: "/works/image.jpg",
     title: "Launch an Instagram account",
     subtitle: "for a beauty studio from scratch.",
-    meta: "3,100 subscribers in the first 2 weeks, recording for 2 weeks ahead.",
+    meta:
+      "3,100 subscribers in the first 2 weeks, recording for 2 weeks ahead.",
+      link: "/projects/nethsuwa",
   },
 ];
 
@@ -44,17 +55,15 @@ export default function WorksCarousel() {
   const [active, setActive] = useState(2);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // 🔥 Center middle card on mobile load
+  /* ---------------- Center on Mobile Load ---------------- */
   useEffect(() => {
     if (window.innerWidth >= 768) return;
 
     const container = containerRef.current;
     if (!container) return;
 
-    const cards = container.children;
-    if (!cards[active]) return;
-
-    const card = cards[active] as HTMLElement;
+    const card = container.children[active] as HTMLElement;
+    if (!card) return;
 
     const offset =
       card.offsetLeft -
@@ -67,43 +76,91 @@ export default function WorksCarousel() {
     });
   }, []);
 
-  // 🔥 Detect scroll on mobile and update active
-  const handleScroll = () => {
-    if (window.innerWidth >= 768) return;
-
+  /* ---------------- Desktop Drag Support ---------------- */
+  useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    const cards = Array.from(container.children);
-    const containerCenter =
-      container.scrollLeft + container.offsetWidth / 2;
+    let isDown = false;
+    let startX: number;
+    let scrollLeft: number;
 
-    let closestIndex = 0;
-    let closestDistance = Infinity;
+    const mouseDown = (e: MouseEvent) => {
+      isDown = true;
+      container.classList.add("cursor-grabbing");
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    };
 
-    cards.forEach((card, index) => {
-      const el = card as HTMLElement;
+    const mouseLeave = () => {
+      isDown = false;
+      container.classList.remove("cursor-grabbing");
+    };
 
-      const cardCenter =
-        el.offsetLeft + el.offsetWidth / 2;
+    const mouseUp = () => {
+      isDown = false;
+      container.classList.remove("cursor-grabbing");
+    };
 
-      const distance = Math.abs(containerCenter - cardCenter);
+    const mouseMove = (e: MouseEvent) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      container.scrollLeft = scrollLeft - walk;
+    };
 
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestIndex = index;
-      }
+    container.addEventListener("mousedown", mouseDown);
+    container.addEventListener("mouseleave", mouseLeave);
+    container.addEventListener("mouseup", mouseUp);
+    container.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      container.removeEventListener("mousedown", mouseDown);
+      container.removeEventListener("mouseleave", mouseLeave);
+      container.removeEventListener("mouseup", mouseUp);
+      container.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  /* ---------------- Detect Active Card (Smoothed) ---------------- */
+  const handleScroll = () => {
+    requestAnimationFrame(() => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const cards = Array.from(container.children);
+      const containerCenter =
+        container.scrollLeft + container.offsetWidth / 2;
+
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      cards.forEach((card, index) => {
+        const el = card as HTMLElement;
+        const cardCenter =
+          el.offsetLeft + el.offsetWidth / 2;
+
+        const distance = Math.abs(containerCenter - cardCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      setActive(closestIndex);
     });
-
-    setActive(closestIndex);
   };
 
   return (
     <section className="relative w-full overflow-hidden py-20">
       {/* Heading */}
-      <h2 className="mb-7 text-center font-onest font-bold leading-[1.05] tracking-tight 
-      text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-      text-shadow-[2px_2px_6px_rgba(0,0,0,0.8)]">
+      <h2
+        className="mb-7 text-center font-onest font-bold leading-[1.05] tracking-tight 
+        text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+        text-shadow-[2px_2px_6px_rgba(0,0,0,0.8)]"
+      >
         <span className="text-white">Projects</span>{" "}
         <span className="text-[#F70670]">
           we’ve <span className="block md:inline">Covered</span>
@@ -111,7 +168,8 @@ export default function WorksCarousel() {
       </h2>
 
       <p className="mb-16 mx-auto text-center font-manrope text-[#f1f9f4] text-base md:text-lg leading-relaxed max-w-xl">
-        A showcase of our finest work across various media productions and creative ventures.
+        A showcase of our finest work across various media productions and
+        creative ventures.
       </p>
 
       {/* Carousel */}
@@ -125,7 +183,11 @@ export default function WorksCarousel() {
           px-6 md:px-0
           snap-x snap-mandatory md:snap-none
           scroll-smooth
+          scroll-px-6
+          scrollbar-hide
+          cursor-grab
         "
+        style={{ WebkitOverflowScrolling: "touch" }}
       >
         {works.map((item, index) => {
           const isActive = index === active;
@@ -139,11 +201,14 @@ export default function WorksCarousel() {
                 }
               }}
               className={`
-                relative cursor-pointer
-                transition-transform duration-300 ease-out
+                relative transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
                 snap-center md:snap-none
                 flex-shrink-0 md:flex-shrink
-                ${isActive ? "scale-100 opacity-100" : "scale-90 opacity-40"}
+                ${
+                  isActive
+                    ? "scale-100 opacity-100 translate-y-0"
+                    : "scale-95 opacity-50 translate-y-4"
+                }
               `}
             >
               {isActive ? (
@@ -155,12 +220,13 @@ export default function WorksCarousel() {
                         autoPlay
                         muted
                         loop
+                        playsInline
                         className="h-full w-full object-cover"
                       />
                     ) : (
                       <img
                         src={item.src}
-                        alt=""
+                        alt={item.title}
                         className="h-full w-full object-cover"
                       />
                     )}
@@ -178,9 +244,13 @@ export default function WorksCarousel() {
                     </p>
                   </div>
 
-                  <div className="absolute bottom-5 left-5 flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
+                  <Link
+                    href={item.link}
+                    onClick={(e) => e.stopPropagation()}
+                    className="absolute bottom-5 left-5 flex h-10 w-10 items-center justify-center rounded-full bg-white text-black transition-transform duration-300 hover:scale-110 active:scale-95"
+                  >
                     ↗
-                  </div>
+                  </Link>
                 </div>
               ) : (
                 <div className="relative h-[360px] w-[240px] overflow-hidden rounded-3xl bg-black">
@@ -189,12 +259,13 @@ export default function WorksCarousel() {
                       src={item.src}
                       muted
                       preload="metadata"
+                      playsInline
                       className="h-full w-full object-cover grayscale"
                     />
                   ) : (
                     <img
                       src={item.src}
-                      alt=""
+                      alt={item.title}
                       className="h-full w-full object-cover grayscale"
                     />
                   )}
@@ -211,8 +282,10 @@ export default function WorksCarousel() {
         {works.map((_, i) => (
           <span
             key={i}
-            className={`h-2 w-2 rounded-full transition ${
-              i === active ? "bg-[#F70670] w-4" : "bg-gray-600"
+            className={`h-2 transition-all duration-300 rounded-full ${
+              i === active
+                ? "bg-[#F70670] w-6"
+                : "bg-gray-600 w-2"
             }`}
           />
         ))}

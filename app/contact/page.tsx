@@ -11,6 +11,8 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+
     setLoading(true);
     setStatus(null);
 
@@ -41,7 +43,7 @@ export default function ContactPage() {
       if (res.ok && result?.success) {
         setStatus("success");
         setMessage("Message sent successfully!");
-        e.currentTarget.reset();
+        form.reset();
       } else {
         setStatus("error");
         setMessage(result?.message || "Failed to send message. Please try again.");
