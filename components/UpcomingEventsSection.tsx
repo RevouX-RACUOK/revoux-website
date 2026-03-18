@@ -4,15 +4,15 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 
 const events = [
   {
-    title: "Graphic Designing Competition",
+    title: "Career Fair '26 Closing Ceremony",
     description:
       "Unleash your creativity and bring your ideas to life! Challenges designers to craft visually compelling artwork that communicates a powerful message. This is your chance to showcase your talent, gain recognition.",
-    date: "March 15, 2024",
-    time: "10:00 AM - 6:00 PM",
-    location: "University of Kelaniya",
-    image: "/gallery/graphic.png",
-    cta: "Register Now",
-    link: "https://forms.gle/graphicdesign",
+    date: "March 20, 2026",
+    time: "13:00 PM - 15:00 PM",
+    location: "Social Science Auditorium, University of Kelaniya",
+    image: "/gallery/careerfair.jpeg",
+    // cta: "Register Now",
+    // link: "https://forms.gle/graphicdesign",
   },
   {
     title: "Film Screening",
@@ -22,7 +22,7 @@ const events = [
     location: "Revoux Studio Theater",
     image: "/gallery/film.jpg",
     cta: "Register Now",
-    link: "https://forms.gle/filmscreening",
+    
   },
 ];
 

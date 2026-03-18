@@ -42,6 +42,11 @@ const teamMembers = [
     image: "/about/oshan.png",
   },
   {
+    name: "Rtr. Vimukthi Paranagama",
+    role: "Photography Team",
+    image: "/about/vimukthi.jpeg",
+  },
+  {
     name: "Rtr. Sachini Rajapaksha",
     role: "Moderating Team",
     image: "/about/sachini.png",
@@ -74,12 +79,12 @@ const teamMembers = [
   {
     name: "Rtr. Dilmi Perera ",
     role: "Secretary",
-    image: "/about/dilmi.png",
+    image: "/about/dilmi.jpeg",
   },
   {
     name: "Rtr. Asindi Dissanayake",
     role: "Treasurer",
-    image: "/about/asindi.png",
+    image: "/about/asindi.jpeg",
   },
 
 ];

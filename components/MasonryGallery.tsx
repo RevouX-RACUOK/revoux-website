@@ -14,14 +14,21 @@ const gallery = [
   { src: "/gallery/9.jpg", span: "row-span-1" },
   { src: "/gallery/10.jpg", span: "row-span-2" },
   { src: "/gallery/11.jpg", span: "row-span-1" },
-  { src: "/gallery/12.jpg", span: "row-span-1" },
+  { src: "/gallery/12.jpg", span: "row-span-2" },
+  { src: "/gallery/13.jpg", span: "row-span-1" },
+  { src: "/gallery/14.jpg", span: "row-span-2" },
+  { src: "/gallery/15.jpg", span: "row-span-1" },
+  { src: "/gallery/17.jpg", span: "row-span-1" },
 ];
 
 export default function EditorialGallery() {
   return (
     <section className="mt-24 mb-24 relative mx-auto max-w-7xl rounded-3xl border border-white/10 bg-[#0b0614] p-6 md:p-10">
       {/* Action button */}
-      <button className="absolute right-6 top-6 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition">
+      <button
+        onClick={() => window.location.reload()}
+        className="absolute right-6 top-6 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition"
+      >
         ⟳
       </button>
 

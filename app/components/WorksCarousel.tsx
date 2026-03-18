@@ -11,7 +11,7 @@ const works = [
     title: "Project Nethsuwa",
     subtitle: "Phase 01",
     meta: "organized by the Leo Club of University of Kelaniya.",
-    link: "/projects/nethsuwa",
+    link: "https://www.facebook.com/share/p/1K8y1txre9/",
   },
   {
     type: "video",
@@ -20,7 +20,16 @@ const works = [
     subtitle: "A Night Wrapped in Lights and Laughter",
     meta:
       "Organized by the Club Service Avenue of Rotaract club of University of Kelaniya.",
-      link: "/projects/nethsuwa",
+      link: "",
+  },
+  {
+    type: "image",
+    src: "/works/careerfair.jpg",
+    title: "Career Fair '26 Main Event",
+    subtitle: "",
+    meta:
+      "Organized by the Career Guidance Unit of University of Kelaniya.",
+      link: "https://www.facebook.com/share/p/1B27CiaExn/",
   },
   {
     type: "image",
@@ -29,7 +38,7 @@ const works = [
     subtitle: "Podcast Series",
     meta:
       "Organized by the Editorial Avenue of Rotaract club of University of Kelaniya.",
-      link: "/projects/nethsuwa",
+      link: "https://youtu.be/Nq3d2wGx9Bw?si=e7hZBdA70n1h3Z43",
   },
   {
     type: "video",
@@ -38,15 +47,6 @@ const works = [
     subtitle: "Inter University Pagent",
     meta:
       "Organized by the Professional Development Avenue of Rotaract club of University of Kelaniya.",
-      link: "/projects/nethsuwa",
-  },
-  {
-    type: "image",
-    src: "/works/image.jpg",
-    title: "Launch an Instagram account",
-    subtitle: "for a beauty studio from scratch.",
-    meta:
-      "3,100 subscribers in the first 2 weeks, recording for 2 weeks ahead.",
       link: "/projects/nethsuwa",
   },
 ];
