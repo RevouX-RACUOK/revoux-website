@@ -11,8 +11,8 @@ const events = [
     time: "13:00 PM - 15:00 PM",
     location: "Social Science Auditorium, University of Kelaniya",
     image: "/gallery/careerfair.jpeg",
-    // cta: "Register Now",
-    // link: "https://forms.gle/graphicdesign",
+    cta: "Register Now",
+    link: "https://forms.gle/graphicdesign",
   },
   {
     title: "Film Screening",
