@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 
 const works = [
@@ -20,16 +20,16 @@ const works = [
     subtitle: "A Night Wrapped in Lights and Laughter",
     meta:
       "Organized by the Club Service Avenue of Rotaract club of University of Kelaniya.",
-      link: "",
+    link: "",
   },
   {
     type: "image",
-    src: "/works/mainevent.JPG",
+    src: "/works/mainevent.jpg", 
     title: "Career Fair '26 Main Event",
     subtitle: "",
     meta:
       "Organized by the Career Guidance Unit of University of Kelaniya.",
-      link: "https://www.facebook.com/share/p/1B27CiaExn/",
+    link: "https://www.facebook.com/share/p/1B27CiaExn/",
   },
   {
     type: "image",
@@ -38,7 +38,7 @@ const works = [
     subtitle: "Podcast Series",
     meta:
       "Organized by the Editorial Avenue of Rotaract club of University of Kelaniya.",
-      link: "https://youtu.be/Nq3d2wGx9Bw?si=e7hZBdA70n1h3Z43",
+    link: "https://youtu.be/Nq3d2wGx9Bw?si=e7hZBdA70n1h3Z43",
   },
   {
     type: "video",
@@ -47,7 +47,7 @@ const works = [
     subtitle: "Inter University Pagent",
     meta:
       "Organized by the Professional Development Avenue of Rotaract club of University of Kelaniya.",
-      link: "/projects/nethsuwa",
+    link: "/projects/nethsuwa",
   },
 ];
 
@@ -123,7 +123,7 @@ export default function WorksCarousel() {
     };
   }, []);
 
-  /* ---------------- Detect Active Card (Smoothed) ---------------- */
+  /* ---------------- Detect Active Card ---------------- */
   const handleScroll = () => {
     requestAnimationFrame(() => {
       const container = containerRef.current;
@@ -156,11 +156,7 @@ export default function WorksCarousel() {
   return (
     <section className="relative w-full overflow-hidden py-20">
       {/* Heading */}
-      <h2
-        className="mb-7 text-center font-onest font-bold leading-[1.05] tracking-tight 
-        text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-        text-shadow-[2px_2px_6px_rgba(0,0,0,0.8)]"
-      >
+      <h2 className="mb-7 text-center font-onest font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-shadow-[2px_2px_6px_rgba(0,0,0,0.8)]">
         <span className="text-white">Projects</span>{" "}
         <span className="text-[#F70670]">
           we’ve <span className="block md:inline">Covered</span>
@@ -176,18 +172,7 @@ export default function WorksCarousel() {
       <div
         ref={containerRef}
         onScroll={handleScroll}
-        className="
-          flex items-center gap-6
-          md:justify-center
-          overflow-x-auto md:overflow-visible
-          px-6 md:px-0
-          snap-x snap-mandatory md:snap-none
-          scroll-smooth
-          scroll-px-6
-          scrollbar-hide
-          cursor-grab
-        "
-        style={{ WebkitOverflowScrolling: "touch" }}
+        className="flex items-center gap-6 md:justify-center overflow-x-auto md:overflow-visible px-6 md:px-0 snap-x snap-mandatory md:snap-none scroll-smooth scroll-px-6 scrollbar-hide cursor-grab"
       >
         {works.map((item, index) => {
           const isActive = index === active;
@@ -196,42 +181,43 @@ export default function WorksCarousel() {
             <div
               key={index}
               onClick={() => {
-                if (window.innerWidth >= 768) {
-                  setActive(index);
-                }
+                if (window.innerWidth >= 768) setActive(index);
               }}
-              className={`
-                relative transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-                snap-center md:snap-none
-                flex-shrink-0 md:flex-shrink
-                ${
-                  isActive
-                    ? "scale-100 opacity-100 translate-y-0"
-                    : "scale-95 opacity-50 translate-y-4"
-                }
-              `}
+              className={`relative transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] snap-center md:snap-none flex-shrink-0 md:flex-shrink ${
+                isActive
+                  ? "scale-100 opacity-100 translate-y-0"
+                  : "scale-95 opacity-50 translate-y-4"
+              }`}
             >
               {isActive ? (
                 <div className="relative h-[420px] w-[280px] rounded-3xl bg-gradient-to-br from-[#ff2d95] via-[#e6005c] to-[#ff003d] p-5 text-white shadow-2xl">
-                  <div className="h-44 w-full overflow-hidden rounded-2xl bg-black/30">
+                  
+                  {/* MEDIA */}
+                  <div className="relative h-44 w-full overflow-hidden rounded-2xl bg-black/30">
                     {item.type === "video" ? (
                       <video
                         src={item.src}
-                        autoPlay
                         muted
                         loop
+                        preload="metadata"
                         playsInline
                         className="h-full w-full object-cover"
+                        onMouseEnter={(e) => e.currentTarget.play()}
+                        onMouseLeave={(e) => e.currentTarget.pause()}
                       />
                     ) : (
-                      <img
+                      <Image
                         src={item.src}
                         alt={item.title}
-                        className="h-full w-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 280px"
+                        priority={index === 0}
                       />
                     )}
                   </div>
 
+                  {/* TEXT */}
                   <div className="mt-6">
                     <h3 className="font-onest text-lg font-semibold leading-snug">
                       {item.title}
@@ -244,6 +230,7 @@ export default function WorksCarousel() {
                     </p>
                   </div>
 
+                  {/* LINK */}
                   <Link
                     href={item.link}
                     onClick={(e) => e.stopPropagation()}
@@ -263,10 +250,12 @@ export default function WorksCarousel() {
                       className="h-full w-full object-cover grayscale"
                     />
                   ) : (
-                    <img
+                    <Image
                       src={item.src}
                       alt={item.title}
-                      className="h-full w-full object-cover grayscale"
+                      fill
+                      className="object-cover grayscale"
+                      sizes="240px"
                     />
                   )}
                   <div className="absolute inset-0 bg-black/40" />
@@ -283,9 +272,7 @@ export default function WorksCarousel() {
           <span
             key={i}
             className={`h-2 transition-all duration-300 rounded-full ${
-              i === active
-                ? "bg-[#F70670] w-6"
-                : "bg-gray-600 w-2"
+              i === active ? "bg-[#F70670] w-6" : "bg-gray-600 w-2"
             }`}
           />
         ))}
