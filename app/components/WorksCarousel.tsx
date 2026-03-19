@@ -24,7 +24,7 @@ const works = [
   },
   {
     type: "image",
-    src: "/works/mainevent.jpg", 
+    src: "/works/cf.jpg", 
     title: "Career Fair '26 Main Event",
     subtitle: "Walking Interviews",
     meta:
