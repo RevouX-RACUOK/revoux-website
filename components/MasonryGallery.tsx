@@ -5,7 +5,7 @@ import Image from "next/image";
 const gallery = [
   { src: "/gallery/1.jpg", span: "row-span-2" },
   { src: "/gallery/2.jpg", span: "row-span-1" },
-  { src: "/gallery/3.jpeg", span: "row-span-1" },
+  { src: "/gallery/3.jpg", span: "row-span-1" },
   { src: "/gallery/4.jpg", span: "row-span-2" },
   { src: "/gallery/5.jpg", span: "row-span-1" },
   { src: "/gallery/6.jpg", span: "row-span-1" },
@@ -17,7 +17,7 @@ const gallery = [
   { src: "/gallery/12.jpg", span: "row-span-2" },
   { src: "/gallery/13.jpg", span: "row-span-1" },
   { src: "/gallery/14.jpg", span: "row-span-2" },
-  { src: "/gallery/15.jpg", span: "row-span-1" },
+  { src: "/gallery/15.jpeg", span: "row-span-1" },
   { src: "/gallery/17.jpg", span: "row-span-1" },
 ];
 
