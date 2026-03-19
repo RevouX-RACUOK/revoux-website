@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="flex min-h-screen flex-col items-center justify-start md:justify-center pt-24 md:pt-0 text-center"
+      className="<section pt-20 pb-10 flex flex-col items-center justify-start md:justify-center text-center"
 
     >
       {/* Welcome text */}
