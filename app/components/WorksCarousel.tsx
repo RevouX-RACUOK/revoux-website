@@ -26,7 +26,7 @@ const works = [
     type: "image",
     src: "/works/mainevent.jpg", 
     title: "Career Fair '26 Main Event",
-    subtitle: "",
+    subtitle: "Walking Interviews",
     meta:
       "Organized by the Career Guidance Unit of University of Kelaniya.",
     link: "https://www.facebook.com/share/p/1B27CiaExn/",
