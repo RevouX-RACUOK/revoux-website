@@ -24,7 +24,7 @@ const works = [
   },
   {
     type: "image",
-    src: "/works/careerfair.jpg",
+    src: "/works/mainevent.jpg",
     title: "Career Fair '26 Main Event",
     subtitle: "",
     meta:
