@@ -27,7 +27,7 @@ const teamMembers = [
     image: "/about/thilini.png",
   },
   {
-    name: "Rtr. Pamodya",
+    name: "Rtr. Pamodya Nisansala",
     role: "Team Leader",
     image: "/about/pamodya.png",
   },
