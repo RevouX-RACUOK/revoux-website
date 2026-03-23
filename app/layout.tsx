@@ -3,6 +3,7 @@ import { Onest, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/react";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  
 }: {
   children: React.ReactNode;
 }) {
@@ -34,6 +36,7 @@ export default function RootLayout({
         <Header />
         <ScrollToTop />
         <main className="pt-20">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
