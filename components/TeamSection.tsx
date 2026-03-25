@@ -4,17 +4,17 @@ const teamMembers = [
   {
     name: "Rtr. Sithika Himandith",
     role: "Digital Media Co-Director",
-    image: "/about/sithika.png",
+    image: "/about/sithika.jpg",
   },
   {
     name: "Rtr. Gangani Yashodara",
     role: "Digital Media Co-Director",
-    image: "/about/yashodara.png",
+    image: "/about/yashodara.jpg",
   },
   {
     name: "Rtr. Nadeesha Nilupul",
     role: "Digital Media Co-Director",
-    image: "/about/nadeesha.png",
+    image: "/about/nadeesha.jpg",
   },
   {
     name: "Rtr. Indusara Senanayake",
@@ -24,7 +24,7 @@ const teamMembers = [
   {
     name: "Rtr. Thilini Senevirathna",
     role: "Team Leader",
-    image: "/about/thilini.png",
+    image: "/about/thilini.jpg",
   },
   {
     name: "Rtr. Pamodya Nisansala",
@@ -34,7 +34,7 @@ const teamMembers = [
   {
     name: "Rtr. Osanda Senevirathna",
     role: "Photography / Videography Team",
-    image: "/about/osanda.png",
+    image: "/about/osanda.jpg",
   },
   {
     name: "Rtr. Oshan Harischandra",
@@ -49,32 +49,32 @@ const teamMembers = [
   {
     name: "Rtr. Sachini Rajapaksha",
     role: "Moderating Team",
-    image: "/about/sachini.png",
+    image: "/about/sachini.jpg",
   },
   {
     name: "Rtr. Baghya John",
     role: "Moderating Team",
-    image: "/about/bagya.png",
+    image: "/about/bagya.jpg",
   },
   {
     name: "Rtr. Hiranya Edirisinghe",
     role: "Moderating Team",
-    image: "/about/hiranya.png",
+    image: "/about/hiranya.jpg",
   },
   {
     name: "Rtr. Methmi Abeysinghe",
     role: "Photography / Moderating Team",
-    image: "/about/methmi.png",
+    image: "/about/methmi.jpg",
   },
   {
     name: "Rtr. Sithruwani Jayarathna",
     role: "Moderating Team",
-    image: "/about/sithruwani.png",
+    image: "/about/sithruwani.jpg",
   },
   {
     name: "Rtr. Kaveesha Vimukthi",
     role: "Video Editor",
-    image: "/about/kaveesha.png",
+    image: "/about/kaveesha.jpeg",
   },
   {
     name: "Rtr. Dilmi Perera ",
