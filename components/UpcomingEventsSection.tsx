@@ -1,8 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import { Calendar, Clock, MapPin, Phone } from "lucide-react";
 
 const events = [
+  {
+    title: "Mansion of the Mind - Pre-orders Are Now Open!",
+    description:
+      "Mansion of the Mind! features evocative verses crafted by 20 Rotaract and Interact Clubs across the country, brought to life under the project Writing Maze 3.0!",
+    image: "/gallery/writingmaze.jpeg",
+    cta: "Pre Order Now!!",
+    link: "https://forms.gle/SDYNKK43AsMSDLJK9",
+    contact: "Rtr. Zamra Razeel: +94 75 181 0308 ",// better format for tel link
+  },
   {
     title: "Career Fair '26 Closing Ceremony",
     description:
@@ -22,7 +31,6 @@ const events = [
     location: "Revoux Studio Theater",
     image: "/gallery/film.jpg",
     cta: "Register Now",
-    
   },
 ];
 
@@ -61,22 +69,41 @@ export default function UpcomingEventsSection() {
                   </p>
 
                   {/* Meta info */}
-                  <div className="mt-4 flex flex-wrap gap-6 text-sm text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <Calendar size={16} className="text-[#F70670]" />
-                      {event.date}
-                    </div>
+                  {(event.date || event.time || event.location) && (
+                    <div className="mt-4 flex flex-wrap gap-6 text-sm text-gray-500">
+                      {event.date && (
+                        <div className="flex items-center gap-2">
+                          <Calendar size={16} className="text-[#F70670]" />
+                          {event.date}
+                        </div>
+                      )}
 
-                    <div className="flex items-center gap-2">
-                      <Clock size={16} className="text-[#F70670]" />
-                      {event.time}
-                    </div>
+                      {event.time && (
+                        <div className="flex items-center gap-2">
+                          <Clock size={16} className="text-[#F70670]" />
+                          {event.time}
+                        </div>
+                      )}
 
-                    <div className="flex items-center gap-2">
-                      <MapPin size={16} className="text-[#F70670]" />
-                      {event.location}
+                      {event.location && (
+                        <div className="flex items-center gap-2">
+                          <MapPin size={16} className="text-[#F70670]" />
+                          {event.location}
+                        </div>
+                      )}
                     </div>
-                  </div>
+                  )}
+
+                  {/* Contact */}
+                  {event.contact && (
+                    <a
+                      href={`tel:${event.contact}`}
+                      className="mt-4 flex items-center gap-2 text-sm text-gray-500 hover:text-white transition"
+                    >
+                      <Phone size={16} className="text-[#F70670]" />
+                      {event.contact}
+                    </a>
+                  )}
                 </div>
 
                 {/* CTA */}
