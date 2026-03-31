@@ -2,7 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Clock, MapPin, Phone } from "lucide-react";
 
-const events = [
+type EventType = {
+  title: string;
+  description: string;
+  image: string;
+  cta?: string;
+  link?: string;
+  date?: string;
+  time?: string;
+  location?: string;
+  contactName?: string;
+  contactPhone?: string;
+  price?: string;
+};
+
+const events: EventType[] = [
   {
     title: "Mansion of the Mind - Pre-orders Are Now Open!",
     description:
@@ -10,7 +24,9 @@ const events = [
     image: "/gallery/writingmaze.jpeg",
     cta: "Pre Order Now!!",
     link: "https://forms.gle/SDYNKK43AsMSDLJK9",
-    contact: "Rtr. Zamra Razeel: +94 75 181 0308 ",// better format for tel link
+    contactName: "Rtr. Zamra Razeel",
+    contactPhone: "+94751810308",
+    price: "Rs. 1,250",
   },
   {
     title: "Career Fair '26 Closing Ceremony",
@@ -68,6 +84,13 @@ export default function UpcomingEventsSection() {
                     {event.description}
                   </p>
 
+                  {/* Price */}
+                  {event.price && (
+                    <div className="mt-3 text-sm font-medium text-[#ffffff]">
+                      💰 {event.price}
+                    </div>
+                  )}
+
                   {/* Meta info */}
                   {(event.date || event.time || event.location) && (
                     <div className="mt-4 flex flex-wrap gap-6 text-sm text-gray-500">
@@ -95,13 +118,13 @@ export default function UpcomingEventsSection() {
                   )}
 
                   {/* Contact */}
-                  {event.contact && (
+                  {event.contactPhone && (
                     <a
-                      href={`tel:${event.contact}`}
+                      href={`tel:${event.contactPhone}`}
                       className="mt-4 flex items-center gap-2 text-sm text-gray-500 hover:text-white transition"
                     >
                       <Phone size={16} className="text-[#F70670]" />
-                      {event.contact}
+                      {event.contactName} ({event.contactPhone})
                     </a>
                   )}
                 </div>
