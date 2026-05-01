@@ -18,36 +18,27 @@ type EventType = {
 
 const events: EventType[] = [
   {
-    title: "Mansion of the Mind - Pre-orders Are Now Open!",
+    title: "Pixels 01st Round - Inter University Graphic Designing Competition",
     description:
-      "Mansion of the Mind! features evocative verses crafted by 20 Rotaract and Interact Clubs across the country, brought to life under the project Writing Maze 3.0!",
-    image: "/gallery/writingmaze.jpeg",
-    cta: "Pre Order Now!!",
-    link: "https://forms.gle/SDYNKK43AsMSDLJK9",
-    contactName: "Rtr. Zamra Razeel",
-    contactPhone: "+94751810308",
-    price: "Rs. 1,250",
+      "Inter University Graphic designing competition organized by the Digital Media Avenue of the ROtaract Club of University of Kelaniya. This is a great opportunity for students to showcase their creativity and design skills.",
+    image: "/events/pixels.png",
+    date: "May 04, 2026",
+    time: "08:00 AM onwards",
+    cta: "Register Now!",
+    link: "https://forms.gle/Ck6V4trtpmREe3jN9",
+
   },
   {
     title: "Career Fair '26 Closing Ceremony",
     description:
       "Unleash your creativity and bring your ideas to life! Challenges designers to craft visually compelling artwork that communicates a powerful message. This is your chance to showcase your talent, gain recognition.",
-    date: "March 20, 2026",
+    date: "May 22, 2026",
     time: "13:00 PM - 15:00 PM",
     location: "Social Science Auditorium, University of Kelaniya",
-    image: "/gallery/careerfair.jpeg",
-    cta: "Register Now",
-    link: "https://forms.gle/graphicdesign",
+    image: "/events/careerfair.jpeg",
+    
   },
-  {
-    title: "Film Screening",
-    description: "Short film",
-    date: "March 22, 2024",
-    time: "7:00 PM - 10:00 PM",
-    location: "Revoux Studio Theater",
-    image: "/gallery/film.jpg",
-    cta: "Register Now",
-  },
+  
 ];
 
 export default function UpcomingEventsSection() {

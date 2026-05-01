@@ -19,6 +19,11 @@ const gallery = [
   { src: "/gallery/14.jpg", span: "row-span-2" },
   { src: "/gallery/15.jpeg", span: "row-span-1" },
   { src: "/gallery/17.jpg", span: "row-span-1" },
+  { src: "/gallery/18.jpg", span: "row-span-2" },
+  { src: "/gallery/19.jpg", span: "row-span-1" },
+  { src: "/gallery/20.jpg", span: "row-span-2" },
+  { src: "/gallery/21.jpeg", span: "row-span-1" },
+  { src: "/gallery/22.jpg", span: "row-span-1" },
 ];
 
 export default function EditorialGallery() {

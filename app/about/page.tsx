@@ -1,6 +1,7 @@
 import OurValuesSection from "@/components/OurValuesSection";
 import TeamSection from "@/components/TeamSection";
 import Footer from "../components/Footer";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -74,14 +75,16 @@ export default function AboutPage() {
           Powered by
         </p>
 
-        <Image
-          src="/RACUOK.png"
-          alt="RevouX Logo"
-          width={400}
-          height={50}
-          className="h-40 w-auto md:h-64 lg:h-40"
-          priority
-        />
+        <Link href="https://blog.racuok.lk/" target="_blank">
+          <Image
+            src="/RACUOK.png"
+            alt="RevouX Logo"
+            width={400}
+            height={50}
+            className="h-40 w-auto md:h-64 lg:h-40 cursor-pointer"
+            priority
+          />
+        </Link>
       </div>
 
       {/* Our Values */}
