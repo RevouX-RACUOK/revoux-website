@@ -63,7 +63,7 @@ export default function Preloader() {
         </svg>
 
         {/* 3. The Central Icon (Replace with your Logo/Symbol) */}
-        <div className="absolute font-black text-3xl text-white tracking-tighter mix-blend-difference">
+        <div className="absolute font-onest font-bold text-6xl text-white tracking-tighter mix-blend-difference">
           RêvouX 
         </div>
       </div>

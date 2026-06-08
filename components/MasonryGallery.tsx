@@ -3,7 +3,28 @@
 import Image from "next/image";
 
 const gallery = [
+  { src: "/gallery/29.webp", span: "row-span-1" },
   { src: "/gallery/1.jpg", span: "row-span-2" },
+  { src: "/gallery/23.webp", span: "row-span-1" },
+  { src: "/gallery/24.webp", span: "row-span-2" },
+  { src: "/gallery/25.webp", span: "row-span-2" },
+  { src: "/gallery/26.webp", span: "row-span-2" },
+  { src: "/gallery/27.webp", span: "row-span-1" },
+  { src: "/gallery/28.webp", span: "row-span-2" },
+  { src: "/gallery/29.webp", span: "row-span-2" },
+
+  { src: "/gallery/33.webp", span: "row-span-1" },
+  { src: "/gallery/34.webp", span: "row-span-2" },
+  { src: "/gallery/35.webp", span: "row-span-1" },
+  { src: "/gallery/36.webp", span: "row-span-2" },
+  { src: "/gallery/37.webp", span: "row-span-2" },
+  { src: "/gallery/38.webp", span: "row-span-2" },
+  { src: "/gallery/39.webp", span: "row-span-1" },
+  { src: "/gallery/40.webp", span: "row-span-2" },
+  { src: "/gallery/41.webp", span: "row-span-1" },
+  { src: "/gallery/42.webp", span: "row-span-2" },
+  { src: "/gallery/43.webp", span: "row-span-1" },
+  
   { src: "/gallery/2.jpg", span: "row-span-1" },
   { src: "/gallery/3.jpg", span: "row-span-1" },
   { src: "/gallery/4.jpg", span: "row-span-2" },
@@ -19,10 +40,10 @@ const gallery = [
   { src: "/gallery/14.jpg", span: "row-span-2" },
   { src: "/gallery/15.jpeg", span: "row-span-1" },
   { src: "/gallery/17.jpg", span: "row-span-1" },
-  { src: "/gallery/18.jpg", span: "row-span-2" },
+  { src: "/gallery/18.jpg", span: "row-span-1" },
   { src: "/gallery/19.jpg", span: "row-span-1" },
   { src: "/gallery/20.jpg", span: "row-span-2" },
-  { src: "/gallery/21.jpeg", span: "row-span-1" },
+  { src: "/gallery/21.jpg", span: "row-span-1" },
   { src: "/gallery/22.jpg", span: "row-span-1" },
 ];
 

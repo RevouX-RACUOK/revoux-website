@@ -14,12 +14,12 @@ const works = [
     link: "https://www.facebook.com/share/p/1K8y1txre9/",
   },
   {
-    type: "video",
-    src: "/works/christinzel.mp4",
-    title: "Christinzel 25",
-    subtitle: "A Night Wrapped in Lights and Laughter",
+    type: "image",
+    src: "/works/wm.jpg",
+    title: "Writing Maze 3.0",
+    subtitle: "A Night Wrapped in Lights, poets and Laughter",
     meta:
-      "Organized by the Club Service Avenue of Rotaract club of University of Kelaniya.",
+      "Organized by the Editorial Avenue of Rotaract club of University of Kelaniya.",
     link: "",
   },
   {
@@ -41,8 +41,8 @@ const works = [
     link: "https://youtu.be/Nq3d2wGx9Bw?si=e7hZBdA70n1h3Z43",
   },
   {
-    type: "video",
-    src: "/works/mmu.mp4",
+    type: "image",
+    src: "/works/mmu.webp",
     title: "Mr & Miss University '25",
     subtitle: "Inter University Pagent",
     meta:

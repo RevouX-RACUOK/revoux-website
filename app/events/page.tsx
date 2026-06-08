@@ -18,11 +18,17 @@ export default function AboutPage() {
                       text-sm sm:text-base md:text-lg leading-relaxed text-[#8e8e8e]">
           Designed to inspire, built to connect.
         </p>
+        
       </section>
 
       {/* Upcoming Events */}
       <section className="px-4 sm:px-6 lg:px-8">
-        <UpcomingEventsSection />
+        <p className="mt-3 mx-auto max-w-md md:max-w-xl font-manrope
+                      text-sm sm:text-base md:text-lg leading-relaxed text-center text-[#8e8e8e]">
+          As we step into the new Rotaract term 2026–27, exciting initiatives and impactful projects are on the horizon. Stay tuned and join us for another year of service, fellowship, and growth.
+
+        </p>
+        {/* <UpcomingEventsSection /> */}
       </section>
 
       {/* Gallery */}

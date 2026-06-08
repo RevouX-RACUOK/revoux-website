@@ -155,7 +155,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4">
                   <span className="text-[#F70670]">📍</span>
-                  Rotaract Club of University of Kelaniya, University of Kelaniya
+                  Rotaract Club of University of Kelaniya, Dalugama
                 </div>
               </div>
             </div>
