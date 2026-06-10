@@ -15,7 +15,7 @@ const works = [
   },
   {
     type: "image",
-    src: "/works/wm.jpg",
+    src: "/works/wm.JPG",
     title: "Writing Maze 3.0",
     subtitle: "A Night Wrapped in Lights, poets and Laughter",
     meta:
@@ -42,7 +42,7 @@ const works = [
   },
   {
     type: "image",
-    src: "/works/mmu.webp",
+    src: "/works/29.webp",
     title: "Mr & Miss University '25",
     subtitle: "Inter University Pagent",
     meta:
